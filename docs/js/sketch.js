@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(1000, 1000);
+    createCanvas(1080, 1068);
     img = createImage(width, height);
     nextImage();
     paint = new Paint(createVector(width / 2, height / 2));
