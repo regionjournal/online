@@ -3,258 +3,36 @@
 
 <!-- Head of operations -->
 <head>
-    <title>region journal — building better maps...</title>
+    <title>region journal — building better maps</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Stylesheet 1 -->
+    <!-- Stylesheet -->
     <style>
-        body{
+        body {
             background:
                 linear-gradient( #f2f2de 0%,  black 92%), 
                 linear-gradient(to right,  #f2f2de 0%,  #f2f2de 30%), 
-                /* url('https://cdn.lowgif.com/full/ff49c963da40b395-.gif'), */
-                /* url("https://storage.googleapis.com/blessa/region/background-map.png"), */
-                /* url("https://storage.googleapis.com/blessa/region/Screen%20Shot%202020-12-13%20at%201.48.18%20PM.png"); */
+                /* url('https://cdn.lowgif.com/full/ff49c963da40b395-.gif'),
+                url("https://storage.googleapis.com/blessa/region/background-map.png"),
+                url("https://storage.googleapis.com/blessa/region/Screen%20Shot%202020-12-13%20at%201.48.18%20PM.png"); */
                 background-size: cover;
                 background-blend-mode: screen, difference, lighten;
+                font-family: 'Space Grotesk', sans-serif;
+                padding: 0 0px;
 
-            /* background-image: url('https://cdn.lowgif.com/full/ff49c963da40b395-.gif'),  */
-                /* url("https://storage.googleapis.com/blessa/region/Screen%20Shot%202020-12-13%20at%205.05.00%20PM.png"); */
-        }
-    </style>
-
-    <!-- Stylesheet 2 -->
-    <style>
-
-        body {
-            /* background-image: url("https://cdn.shopify.com/s/files/1/0272/4781/products/CA-Elev-24x30_2000x.jpg?v=1596754304"); */
-            /* background: #e3dee0; */
-            /* background: #f2f2de; */
-            font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-            /* font-size: var(--vscode-markdown-font-size, 14px); */
-            font-family: 'Space Grotesk', sans-serif;
-            padding: 0 26px;
-            line-height: var(--vscode-markdown-line-height, 22px);
-            word-wrap: break-word;
+            background-image: url('https://cdn.lowgif.com/full/ff49c963da40b395-.gif'), 
+                url("https://storage.googleapis.com/blessa/region/Screen%20Shot%202020-12-13%20at%205.05.00%20PM.png");
         }
 
-        #code-csp-warning {
-            position: fixed;
-            top: 0;
-            right: 0;
-            color: white;
-            margin: 16px;
-            text-align: center;
-            font-size: 12px;
-            /* font-family: sans-serif; */
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #444444;
-            cursor: pointer;
-            padding: 6px;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
-        }
-
-        #code-csp-warning:hover {
-            text-decoration: none;
-            background-color: #007acc;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
-        }
-
-        body.scrollBeyondLastLine {
-            margin-bottom: calc(100vh - 22px);
-        }
-
-        body.showEditorSelection .code-line {
-            position: relative;
-        }
-
-        body.showEditorSelection .code-active-line:before,
-        body.showEditorSelection .code-line:hover:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: -12px;
-            height: 100%;
-        }
-
-        body.showEditorSelection li.code-active-line:before,
-        body.showEditorSelection li.code-line:hover:before {
-            left: -30px;
-        }
-
-        .vscode-light.showEditorSelection .code-active-line:before {
-            border-left: 3px solid rgba(0, 0, 0, 0.15);
-        }
-
-        .vscode-light.showEditorSelection .code-line:hover:before {
-            border-left: 3px solid rgba(0, 0, 0, 0.40);
-        }
-
-        .vscode-light.showEditorSelection .code-line .code-line:hover:before {
-            border-left: none;
-        }
-
-        .vscode-dark.showEditorSelection .code-active-line:before {
-            border-left: 3px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .vscode-dark.showEditorSelection .code-line:hover:before {
-            border-left: 3px solid rgba(255, 255, 255, 0.60);
-        }
-
-        .vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-            border-left: none;
-        }
-
-        .vscode-high-contrast.showEditorSelection .code-active-line:before {
-            border-left: 3px solid rgba(255, 160, 0, 0.7);
-        }
-
-        .vscode-high-contrast.showEditorSelection .code-line:hover:before {
-            border-left: 3px solid rgba(255, 160, 0, 1);
-        }
-
-        .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-            border-left: none;
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-        }
-
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        a {
-            text-decoration: none;
-        }
 
         a:hover {
             text-decoration: underline;
-        }
-
-        a:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 1px solid -webkit-focus-ring-color;
-            outline-offset: -1px;
-        }
-
-        hr {
-            border: 0;
-            height: 2px;
-            border-bottom: 2px solid;
-        }
-
-        h1 {
-            padding-bottom: 0.3em;
-            line-height: 1.2;
-            border-bottom-width: 1px;
-            border-bottom-style: solid;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-weight: normal;
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-        table>thead>tr>th {
-            text-align: left;
-            border-bottom: 1px solid;
-        }
-
-        table>thead>tr>th,
-        table>thead>tr>td,
-        table>tbody>tr>th,
-        table>tbody>tr>td {
-            padding: 5px 10px;
-        }
-
-        table>tbody>tr+tr>td {
-            border-top: 1px solid;
-        }
-
-        blockquote {
-            margin: 0 7px 0 5px;
-            padding: 0 16px 0 10px;
-            border-left-width: 5px;
-            border-left-style: solid;
-        }
-
-        code {
-            font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-            font-size: 1em;
-            line-height: 1.357em;
-        }
-
-        body.wordWrap pre {
-            white-space: pre-wrap;
-        }
-
-        pre:not(.hljs),
-        pre.hljs code>div {
-            padding: 16px;
-            border-radius: 3px;
-            overflow: auto;
-        }
-
-        pre code {
-            color: var(--vscode-editor-foreground);
-            tab-size: 4;
-        }
-
-        /** Theming */
-        .vscode-light pre {
-            background-color: rgba(220, 220, 220, 0.4);
-        }
-
-        .vscode-dark pre {
-            background-color: rgba(10, 10, 10, 0.4);
-        }
-
-        .vscode-high-contrast pre {
-            background-color: rgb(0, 0, 0);
-        }
-
-        .vscode-high-contrast h1 {
-            border-color: rgb(0, 0, 0);
-        }
-
-        .vscode-light table>thead>tr>th {
-            border-color: rgba(0, 0, 0, 0.69);
-        }
-
-        .vscode-dark table>thead>tr>th {
-            border-color: rgba(255, 255, 255, 0.69);
-        }
-
-        .vscode-light h1,
-        .vscode-light hr,
-        .vscode-light table>tbody>tr+tr>td {
-            border-color: rgba(0, 0, 0, 0.18);
-        }
-
-        .vscode-dark h1,
-        .vscode-dark hr,
-        .vscode-dark table>tbody>tr+tr>td {
-            border-color: rgba(255, 255, 255, 0.18);
         }
 
         .button {
@@ -272,335 +50,168 @@
                 -9px 9px 13px #ffffff;
         }
 
-        .button_sophie {
-            border-radius: 18px;
-            color: white;
-            padding: 100px 100px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 25px;
-            margin: 5px 2px;
-            cursor: pointer;
-            background: linear-gradient(225deg, #d03d0c, #f7490e);
-            box-shadow: -25px 25px 50px #b4350a,
-                25px -25px 50px #ff5310;
-        }
-
-        .button_sophie {
-            border-radius: 18px;
-            color: white;
-            padding: 100px 100px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 25px;
-            margin: 5px 2px;
-            cursor: pointer;
-            background: linear-gradient(225deg, #d03d0c, #f7490e);
-            box-shadow: -25px 25px 50px #b4350a,
-                25px -25px 50px #ff5310;
-        }
-
         .button_region {
-            border-radius: 18px;
-            color: #ffa500;
-            /* color: #005aff; */
+            background: url("https://storage.googleapis.com/blessa/region/background-map.png") no-repeat;
             padding: 100px 100px;
+            margin:0 auto;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 25px;
-            margin: 5px 2px;
+            font-size: 100vw;
+            white-space: nowrap;
+            margin: 0px 2px;
             cursor: pointer;
-            border-radius: 60px;
-            /* background: #e3dee0; */
+            border-radius: 40px;
             box-shadow: 20px 20px 60px #c1bdbe,
                 -20px -20px 60px #ffffff;
         }
-
-    </style>
-
-    <!-- Stylesheet 3 -->
-    <style>
         
-        /* Tomorrow Theme */
-        /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-        /* Original theme - https://github.com/chriskempson/tomorrow-theme */
-        /* Tomorrow Comment */
-        .hljs-comment,
-        .hljs-quote {
-            color: #8e908c;
+        .div_center {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
         }
 
-        /* Tomorrow Red */
-        .hljs-variable,
-        .hljs-template-variable,
-        .hljs-tag,
-        .hljs-name,
-        .hljs-selector-id,
-        .hljs-selector-class,
-        .hljs-regexp,
-        .hljs-deletion {
-            color: #c82829;
+        .ul_buttons {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        /* Tomorrow Orange */
-        .hljs-number,
-        .hljs-built_in,
-        .hljs-builtin-name,
-        .hljs-literal,
-        .hljs-type,
-        .hljs-params,
-        .hljs-meta,
-        .hljs-link {
-            color: #f5871f;
+        .li_buttons {
+            padding: 20px;
         }
 
-        /* Tomorrow Yellow */
-        .hljs-attribute {
-            color: #eab700;
+        .li_signature {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
         }
 
-        /* Tomorrow Green */
-        .hljs-string,
-        .hljs-symbol,
-        .hljs-bullet,
-        .hljs-addition {
-            color: #718c00;
+        .navbar-nav.navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
         }
 
-        /* Tomorrow Blue */
-        .hljs-title,
-        .hljs-section {
-            color: #4271ae;
+        .navbar-mantra {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
         }
 
-        /* Tomorrow Purple */
-        .hljs-keyword,
-        .hljs-selector-tag {
-            color: #8959a8;
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            line-height: 60px; /* Vertically center the text there */
+            background-color: #000000;
         }
 
-        .hljs {
-            display: block;
-            overflow-x: auto;
-            color: #4d4d4c;
-            padding: 0.5em;
+        .footer-font {
+            font-size: calc(3px + 1vw)
         }
 
-        .hljs-emphasis {
-            font-style: italic;
+        .nav-font {
+            font-size: calc(5px + 1vw)
         }
 
-        .hljs-strong {
-            font-weight: bold;
-        }
-    </style>
-
-    <!-- Stylesheet 4 -->
-    <style>
- 
-        body {
-            /* font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo"; */
-            padding: 0 0px;
+        .footer-font-icon {
+            font-size: calc(8px + 1vw)
         }
 
-        pre {
-            background-color: #f8f8f8;
-            border: 1px solid #cccccc;
-            border-radius: 3px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            overflow-wrap: break-word;
+        .white-txt {
+            color: white;
         }
 
-        pre:not(.hljs) {
-            padding: 23px;
-            line-height: 19px;
+        .sm-icon-footer {
+            color: white;
+            text-decoration: none;
         }
 
-        blockquote {
-            background: rgba(127, 127, 127, 0.1);
-            border-color: rgba(0, 122, 204, 0.5);
-        }
-
-        .emoji {
-            height: 1.4em;
-        }
-
-        code {
-            font-size: 14px;
-            line-height: 19px;
-        }
-
-        /* for inline code */
-        :not(pre):not(.hljs)>code {
-            color: #C9AE75;
-            /* Change the old color so it seems less like an error */
-            font-size: inherit;
-        }
-
-        /* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-        .page {
-            page-break-after: always;
+        .bt-txt {
+            color: black;
         }
     </style>
-
-    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 
 <!-- My body different -->
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-fixed-top navbar-light bg-light main-nav" role="navigation" align="center">
+    <nav class="navbar navbar-light bg-light">
         <div class="container">
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a href="#" class="navbar-brand">region.</a>
+            
+            <!-- Navbar item: brand logo -->
+            <ul class="nav navbar-nav navbar-left">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#">region</a>                    
                 </li>
             </ul>
-            <ul class="nav navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="#">building better maps...</a></li>
+
+            <!-- Navbar item: brand mantra -->
+            <ul class="nav navbar-nav navbar-mantra">
+                <li class="nav-item nav-font">building better maps</li>
             </ul>
-            <ul class="nav navbar-nav">
+
+            <!-- Navbar item: brand information -->
+            <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">about.</a>
+                    <a class="nav-link" href="#">about</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Touch break -->
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    <!-- Buttons -->
+    <div class="div_center"> 
+        <ul class="ul_buttons">
 
-    <!-- Button 1 -->
-    <div class="center">
-        <table>
-            <tr>
-                <th>
-                    <!-- A single button to rule the world -->
-                    <a href="https://light-systems.github.io/REGION-DIGITAL/" class="button_region">
-                        <h3><mark>notes.</mark></h3>
-                    </a>
-                </th>
-            </tr>
-        </table>
+            <!-- Button: page 1 -->
+            <li class="li_buttons">
+                <a href="https://storage.googleapis.com/blessa/region/RegionJournalFinal.pdf" class="button_region">
+                    <h3 class="bt-txt">
+                        <!-- <mark>issue 01</mark> -->
+                        <mark>issue 01</mark>
+                    </h3>
+                </a>
+            </li>
+            
+            <!-- Button: page 2 -->
+            <li class="li_buttons">
+                <a href="https://storage.googleapis.com/blessa/region/cube%20map%20png.png" class="button_region">
+                    <h3 class="bt-txt">
+                        <!-- <mark>issue 02</mark> -->
+                        <mark>issue 02</mark>
+                    </h3>
+                </a>
+            </li>
+        </ul>
     </div>
 
-    <!-- Touch break -->
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    
-    <!-- Button 2 -->
-    <div class="center">
-        <table>
-            <tr>
-                <th>
-                    <!-- A single button to rule the world -->
-                    <a href="https://storage.googleapis.com/blessa/region/RegionJournalFinal.pdf" class="button_region">
-                        <h3><mark>issue 01.</mark></h3>
-                    </a>
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <!-- Touch break -->
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <!-- Button 3 -->
-    <div class="center">
-        <table>
-            <tr>
-                <th>
-                    <a href="https://storage.googleapis.com/blessa/region/cube%20map%20png.png" class="button_region">
-                        <h3><mark>issue 02.</mark></h3>
-                    </a>
-                </th>
-            </tr>
-        </table>
-    </div>
-    
-    <!-- Touch break -->
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <!-- Button 4 -->
-    <div class="center">
-        <table>
-            <tr>
-                <th>
-                    
-                    <!-- A single button to rule the world -->
-                    <a href="https://classroom.google.com/c/NDQ0OTgzMDEyOTFa" class="button_region">
-                        <h3><mark>classroom.</mark></h3>
-                    </a>
-                </th>
-            </tr>
-        </table>
-    </div>
-    
-    <!-- Signature -->
-    <div class="center">
-        made by |&nbsp;<a href="https://regionjournal.github.io/online/">regionjournalcrew✨</a>
-    </div>
-
-        <!-- Footer -->
-        <nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-dark main-nav" role="navigation" align="center">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                        <a href="#" class="navbar-brand">region.</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">for the people that exist between borders with family on both sides. </a></li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <div class="container">
-                            <a href="https://www.facebook.com/regionjournal"><i id="social-em" class="fa fa-facebook-square fa-2x social"></i></a>
-                            <a href="https://www.instagram.com/regionjournal/"><i id="social-em" class="fa fa-instagram fa-2x social"></i></a>
-                        </div>
-                    </li>
-                </ul>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row mx-0 white-txt text-center">
+            <div class="col sm-icon-footer">
+                region
             </div>
-        </nav>
-
-    <!-- Call a mermaid! -->
-    <script>
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-                ? 'dark'
-                : 'default'
-        });
-    </script>
+            <div class="col-8 container text-muted footer-font">
+                for the people that exist between borders with family on both sides
+            </div>
+            <div class="col footer-font-icon">
+                <a href="#" class="fa fa-envelope sm-icon-footer"></a>
+                <a href="#" class="fa fa-facebook sm-icon-footer"></a>
+                <a href="#" class="fa fa-instagram sm-icon-footer"></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
