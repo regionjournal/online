@@ -14,13 +14,19 @@
 
     <style>
         body {
-            background:
-                linear-gradient( #f2f2de 0%,  black 92%), 
-                linear-gradient(to right,  #f2f2de 0%,  #f2f2de 30%), 
-                background-size: cover;
-                background-blend-mode: screen, difference, lighten;
-                font-family: 'Space Grotesk', sans-serif;
-                padding: 0 0px;
+
+            background: #e0e0e0;
+            font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+            font-family: 'Space Grotesk', sans-serif;
+            word-wrap: break-word;
+
+            background: #e0e0e0, no-repeat center center fixed; 
+            background-blend-mode: lighten;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            padding: 0 0px;
         }
 
 
@@ -45,6 +51,7 @@
 
         .button_region_1 {
             /* background: url('https://cdn.lowgif.com/full/ff49c963da40b395-.gif') no-repeat; */
+            background: url("img/ogun_fire.gif");
             padding: 100px 100px;
             margin:0 auto;
             text-align: center;
@@ -199,8 +206,9 @@
             <li class="li_buttons">
                 <a href="https://storage.googleapis.com/blessa/region/RegionJournalFinal.pdf" class="button_region_1">
                     <h3 class="bt-txt">
-                        issue01
+                        <mark>issue01</mark>
                     </h3>
+                    <p style="font-size: 10px;"><mark>caption: chad getting pummelled by his 'baby brother.'</mark></p>
                 </a>
             </li>
             
@@ -208,8 +216,9 @@
             <li class="li_buttons">
                 <a href="https://forms.gle/RZ4dbSWN4GafRqyr9" class="button_region_2">
                     <h3 class="bt-txt">
-                        issue02
+                        <mark>issue02</mark>
                     </h3>
+                    <p style="font-size: 10px;"><mark>why are you waiting so long? just submit something. &nbsp;</mark></p>
                 </a>
             </li>
         </ul>
