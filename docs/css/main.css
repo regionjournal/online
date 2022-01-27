@@ -1,0 +1,14 @@
+.nav ul {
+   list-style: none;
+   text-align: center;
+}
+
+.nav ul li {
+   display: inline-block;
+}
+
+.abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
