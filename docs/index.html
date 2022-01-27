@@ -2,13 +2,15 @@
 <html>
 
 <!-- Head of operations ;) -->
+
 <head>
     <title>region journal — building better maps</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="initial-scale=.8, maximum-scale=.8">
     <link rel="stylesheet" href="uikit/css/uikit-rtl.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
@@ -16,100 +18,14 @@
 
     <style>
         @import url(https://fonts.googleapis.com/css?family=Lato:700);
-        html, body {
-        font-family: "Lato", sans-serif;
-        background: url(https://s.cdpn.io/1715/dark_stripes.png);
-        text-align: center;
-        height: 100%;
-        }
 
-        /* .container {
-        text-align: center;
-        position: absolute;
-        margin-top: -80px;
-        width: 100%;
-        top: 50%;
-        } */
-
-        /* .toggle {
-        margin: 4px;
-        display: inline-block;
-        } */
-
-        .toggle {
-        position: relative;
-        height: 250px;
-        width: 250px;
+        html,
+        body {
+            font-family: "Lato", sans-serif;
+            background: url(https://s.cdpn.io/1715/dark_stripes.png);
+            text-align: center;
+            height: 100%;
         }
-        /* .toggle:before {
-        box-shadow: 0 0 17.5px 8.75px #fff;
-        border-radius: 118.3px;
-        background: #fff;
-        position: absolute;
-        margin-left: -50.4px;
-        margin-top: -50.4px;
-        opacity: 0.2;
-        content: "";
-        height: 100.8px;
-        width: 100.8px;
-        left: 50%;
-        top: 50%;
-        } */
-        .toggle .button {
-        -webkit-filter: blur(1px);
-        -moz-filter: blur(1px);
-        filter: blur(1px);
-        transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-        box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
-        border-radius: 96.32px;
-        position: absolute;
-        background: #ccd0d4;
-        margin-left: -48.16px;
-        margin-top: -48.16px;
-        display: block;
-        height: 96.32px;
-        width: 96.32px;
-        left: 50%;
-        top: 50%;
-        }
-        .toggle .label {
-        transition: color 300ms ease-out;
-        text-shadow: 1px 1px 3px #ccd0d4, 0 0 0 rgba(0, 0, 0, 0.8), 1px 1px 4px #fff;
-        line-height: 139px;
-        text-align: center;
-        position: absolute;
-        font-weight: 700;
-        font-size: 42px;
-        display: block;
-        opacity: 0.9;
-        height: 100%;
-        width: 100%;
-        color: rgba(0, 0, 0, 0.4);
-        }
-        .toggle input {
-        opacity: 0;
-        position: absolute;
-        cursor: pointer;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        }
-        .toggle input:active ~ .button {
-        box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 30px 1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 25px 0 rgba(0, 0, 0, 0.4), inset 0 0 10px 1px rgba(255, 255, 255, 0.6);
-        }
-        .toggle input:active ~ .label {
-        font-size: 40px;
-        color: rgba(0, 0, 0, 0.45);
-        }
-        .toggle input:checked ~ .button {
-        box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 25px -1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
-        }
-        .toggle input:checked ~ .label {
-        font-size: 40px;
-        color: rgba(0, 0, 0, 0.4);
-        }  
 
         body {
 
@@ -118,7 +34,7 @@
             font-family: 'Space Grotesk', sans-serif;
             word-wrap: break-word;
 
-            background: #e0e0e0, no-repeat center center fixed; 
+            background: #e0e0e0, no-repeat center center fixed;
             background-blend-mode: lighten;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -130,8 +46,6 @@
         a:hover {
             text-decoration: underline;
         }
-
-
 
         .button {
             background-color: #f0f0f0;
@@ -151,7 +65,7 @@
         .button_region_1 {
             /* opacity:; */
             padding: 100px 100px;
-            margin:0 auto;
+            margin: 0 auto;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -167,7 +81,7 @@
         .button_region_2 {
             /* opacity:; */
             padding: 100px 100px;
-            margin:0 auto;
+            margin: 0 auto;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -177,22 +91,22 @@
             cursor: pointer;
             border-radius: 60px;
             background: linear-gradient(315deg, #f0f0f0, #cacaca);
-            box-shadow:  -20px -20px 60px #bebebe,
-                        20px 20px 60px #ffffff;
+            box-shadow: -20px -20px 60px #bebebe,
+                20px 20px 60px #ffffff;
         }
 
-        .navbar-nav > li {
-            margin-left:0px;
-            margin-right:0px;
+        .navbar-nav>li {
+            margin-left: 0px;
+            margin-right: 0px;
         }
-        
+
         .div_center {
             display: flex;
             position: absolute;
             top: 50%;
             left: 50%;
             /* bring your own prefixes */
-            transform: translate(-50%, -50%);
+            transform: translate(-45%, -46%);
         }
 
         .ul_buttons {
@@ -231,7 +145,8 @@
             width: 100%;
             /* Set the fixed height of the footer here */
             height: 60px;
-            line-height: 60px; /* Vertically center the text there */
+            line-height: 60px;
+            /* Vertically center the text there */
             background-color: #000000;
         }
 
@@ -263,53 +178,60 @@
 </head>
 
 <!-- My body different -->
+
 <body>
 
     <!-- Navbar -->
-    <div class="shadow-sm mb-5 bg-white rounded">
-        <nav class="navbar navbar-light bg-white">
-            <div class="container">
-        
-                <!-- Navbar item: brand information -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://storage.googleapis.com/root-proposal-1246/REGION/region%208.5.19-One%20Pager-1.png">
-                            <bold>about</bold>
-                        </a>
-                        </a>
-                    </li>
-                </ul>
-        
-                <!-- Navbar item: brand mantra -->
-                <ul class="nav navbar-nav navbar-mantra nav-font">
-                    <li class="nav-item">building better maps</li>
-                </ul>
-        
-                <!-- Navbar item: brand logo -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a href="https://eoduniyi.github.io/regionblog/"><img src="img/region_logo_circle_blk.png" width="50vw"></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <div uk-sticky="media: 960"
+        class="uk-navbar-container tm-navbar-container uk-navbar-transparent uk-sticky shadow-sm mb-5 rounded" style="">
+        <div class="uk-container uk-container-expand">
+            <nav class="uk-navbar">
+
+                <!-- Navbar Left -->
+                <div class="uk-navbar-left">
+                    <a href="https://storage.googleapis.com/root-proposal-1246/REGION/region%208.5.19-One%20Pager-1.png"
+                        aria-current="page" class="uk-navbar-item uk-logo router-link-exact-active uk-active">
+                        <canvas width="28" height="34" uk-svg="" src="./images/uikit-logo.svg"
+                            class="uk-margin-small-right" hidden="">
+                        </canvas>
+                        about
+                    </a>
+                </div>
+
+                <!-- Navbar Center -->
+                <div class="uk-navbar-center uk-visible@l">
+                    <div class="uk-navbar-item">
+                        <h5 class="uk-margin-remove">building better maps</h5>
+                    </div>
+                </div>
+
+                <!-- Navbar Right -->
+                <div class="uk-navbar-right"><a href="https://eoduniyi.github.io/regionblog/" aria-current="page"
+                        class="uk-navbar-item uk-logo router-link-exact-active uk-active"><canvas width="28" height="34"
+                            uk-svg="" src="img/region_logo_circle_blk.png" width="50vw" class="uk-margin-small-right"
+                            hidden=""></canvas><svg xmlns="img/region_logo_circle_blk.png" width="28" height="34"
+                            viewBox="0 0 28 34" class="uk-margin-small-right uk-svg">
+                            <img src="img/region_logo_circle_blk.png" width="80vw">
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
     </div>
-    
 
     <!-- Buttons -->
-    <div class="div_center"> 
+    <div class="div_center">
         <ul class="ul_buttons">
 
             <!-- Button: page 1 -->
             <li class="li_buttons">
-                <a href="https://storage.googleapis.com/blessa/region/RegionJournalFinal.pdf" class="button_region_2">
+                <a href="https://storage.googleapis.com/blessa/region/RegionJournalFinal.pdf" class="button_region_1">
                     <h3 class="bt-txt">
                         issue01
                     </h3>
                 </a>
             </li>
-            
+
             <!-- Button: page 2 -->
             <li class="li_buttons">
                 <a href="https://forms.gle/RZ4dbSWN4GafRqyr9" class="button_region_2">
@@ -340,4 +262,5 @@
         </div>
     </footer>
 </body>
+
 </html>
